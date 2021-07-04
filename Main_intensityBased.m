@@ -69,11 +69,20 @@ while (norm(d)>1e-10) && (m<=Iteration)
     R = T(1:3,1:3);
     t = T(1:3,4);
     P2 = I1_xyz*R' + kron(ones(size(I1_xyz,1),1),t'); % calculate the corresponding coordinates of I1_xyz in I2 frame.
-      
-    %=======Participants need to complete the following two function=======
-    % Remark: you can decide the inputs and outouts of the functons.
     
-    e  = intensity_Diff(); % calculate overall intensity differences
+    index1 = find(P2(:,1)>=1 & P2(:,1)<=l_ &...
+                  P2(:,2)>=1 & P2(:,2)<=w_ &...
+                  P2(:,3)>=1 & P2(:,3)<=h_ );
+    P2      = P2(index1,:);
+    isWhite = mask2_grid(P2);
+    index2  = find(isWhite==255);
+    P2      = P2(index2,:);
+    P1      = I1_xyz(index1(index2),:);
+    num     = size(P1,1);
+    e       = I1_grid(P1)- I2_grid(P2); % calculate overall intensity differences
+      
+    %=======Participants need to complete the following function===========
+    
     J  = jacobian_Mat();       % calculate overall Jacobian matrix
     
     %===========================END========================================
