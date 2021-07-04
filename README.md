@@ -13,8 +13,7 @@ In this step, participants can choose any methods to composite the aligned image
 In this step, participants will learn to use a sequential strategy to register and fuse a sequence of 3D TEE images. In the end, a panoramic image with a larger FoV than the original single volume will be reconstructed.
 
 4. Evaluation (optional):
-In this step, participants can use some estimation metrics such as Hausdorff distance (HD) which are available in MeshLab to evaluate the accuracy of the registration.
-For HD, you can refer the follwoing webpage.
+In this step, participants can use some estimation metrics such as Hausdorff distance (HD) which are available in MeshLab to evaluate the accuracy of the registration. You can download MeshLab from https://www.meshlab.net/#download. And for HD, you can refer the following webpage.
 http://meshlabstuff.blogspot.com/2010/01/measuring-difference-between-two-meshes.html
 
 Main reference: Mao, Z., Zhao, L., Huang, S., Fan, Y., & Lee, A. P. W. (2021). Direct 3D Ultrasound Fusion for Transesophageal Echocardiography. Computers in Biology and Medicine, 104502. https://doi.org/10.1016/j.compbiomed.2021.104502
