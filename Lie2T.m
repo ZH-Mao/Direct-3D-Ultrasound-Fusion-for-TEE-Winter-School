@@ -1,6 +1,6 @@
 function  T=Lie2T(x)
 % ===============================================================================================
-% Convert x from Lie algbra to Transform matrix
+% Convert x from Lie algbra to transform matrix
 % Version:1.0
 % ===============================================================================================
 % 
